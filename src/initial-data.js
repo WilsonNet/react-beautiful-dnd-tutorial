@@ -12,9 +12,9 @@ const inialData = {
       title: 'To do',
       taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5']
     },
-    // Facilitate reordering of the columns
-    columnOrder: ['column-1']
-  }
+  },
+  // Facilitate reordering of the columns
+  columnOrder: ['column-1']
 };
 
 export default inialData;
