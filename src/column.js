@@ -24,8 +24,8 @@ const Column = props => {
         {provided => (
           // Each child needs to be a function (Render Props)
           <TaskList ref={provided.innerRef} {...provided.droppableProps}>
-            {props.tasks.map(task => (
-              <Task key={task.id} task={task} />
+            {props.tasks.map((task, index) => (
+              <Task key={task.id} task={task} index={index} />
             ))}
             {provided.placeholder}
           </TaskList>

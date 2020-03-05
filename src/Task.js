@@ -7,10 +7,25 @@ const Container = styled.div`
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 8px;
+  background-color: #fff;
 `;
 
 const Task = props => {
-  return <Container>{props.task.content}</Container>;
+  return (
+    // Index is required
+    <Draggable draggableId={props.task.id} index={props.index}>
+      {provided => (
+        <Container
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          //  Where you use to drag
+          {...provided.dragHandleProps}
+        >
+          {props.task.content}
+        </Container>
+      )}
+    </Draggable>
+  );
 };
 
 export default Task;
