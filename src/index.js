@@ -8,7 +8,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 const App = () => {
   const [state, setState] = useState(initialData);
   const onDragEnd = result => {
-    // TODO: reorder our column
+    // DONE: reorder our column
     const { destination, source, draggableId } = result;
 
     if (!destination) {
